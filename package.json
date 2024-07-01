@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "amazon-user-pool-srp-client": "^1.0.4",
+    "sjcl-aws": "^1.0.8"
+  },
+  "devDependencies": {
+    "cypress": "^13.12.0"
+  }
+}
