@@ -1,0 +1,50 @@
+name: API_Tests
+
+on:
+  push:
+
+jobs:
+  Build:
+    runs-on: ubuntu-22.04
+    name: Build application
+    steps:
+      - run: echo build application
+
+  test:
+    runs-on: ubuntu-22.04
+    name: Run tests
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Create dir
+        run: |
+          mkdir TestResults
+          
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with: 
+         node-version: '20.x'
+         
+      - name: Install newman
+        run: |
+         npm install -g newman
+         npm install -g newman-reporter-htmlextra
+         
+      - name: Run tests
+        run: |
+          newman run ./collections/Privilee_API_Test_Assessment.postman_collection.json  -e ./collections/DummyAPI_Variables.postman_environment.json -r cli,htmlextra --reporter-htmlextra-export TestResults/APITestRun_$(date '+%d%m%Y_%H%M').html
+      
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
+        if: always()
+        continue-on-error: true
+        with:
+          name: Reports_APITests
+          path: TestResults
+      
+      
+  deploy:
+    runs-on: ubuntu-22.04
+    name: Deploy application
+    steps:
+      - run: echo deploy
