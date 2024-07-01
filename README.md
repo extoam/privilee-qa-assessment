@@ -46,7 +46,7 @@ All implemented tests ensure the Map Page is functional, user-friendly, and perf
 - **Functional Tests**: Ensure that the core functionality works as expected from an end-user perspective.
 - **Data Accuracy**: Ensure that the data displayed is accurate and consistent.
 
-Detailed Tests Coverage  can be found in [Cypress Test Summary Report.txt](https://github.com/extoam/privilee-qa-assessment/blob/main/Test%20Summary%20Report.txt)
+Detailed Tests Coverage  can be found in [Cypress Test Summary Report.txt](https://github.com/extoam/privilee-qa-assessment/blob/main/Cypress%20Test%20Summary%20Report.txt)
 
 
 
