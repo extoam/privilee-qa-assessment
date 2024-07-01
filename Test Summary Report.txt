@@ -1,0 +1,92 @@
+
+CYPRESS TEST SUMMARY REPORT
+
+The test script has been implemented on cypress.io  and  automatically executed by CI/CD Pipeline in Github Action workflow:
+#### Test Run link: https://github.com/extoam/privilee-qa-assessment/actions/runs/9748056922 
+
+
+The Cypress test script covers different aspects of the Map page of Privilee website verification  (https://staging-website.privilee.ae/map?).
+All implemented tests ensure the Map Page is functional, user-friendly, and performs well. 
+
+#### Test Coverage:
+Test Suite#1 MapPage UI Controls Verification;
+Test Suite#2 MapPage Performance validation/ Checking Response time of fetching venues; 
+Test Suite#3 Functional tests and Data Accuracy tests.
+
+Covered Functional Test included the following tests:
+# Venues List functionality tests
+# Filter functionality tests
+# Search functionality tests
+# Data Accuracy tests for a fetched Venue
+# MapBox verification tests
+# "Explore Privilee" submission form tests
+
+
+#### Test Scenarios:
+
+Test Suite#1 - Map Page UI Verification/ Page Elements are present
+#### Objective: To ensure that the user interface elements function correctly and provide a good user experience.
+#### Test Cases:
+1.	Check if Map page is opened successfully
+	Expected result: The Map page loads without errors.
+2.	Check if categories buttons are displayed on the page
+	Expected result: The category buttons (Pool & Beach, Fitness, Dining) are visible and accessible.
+3.	Check if a list of Pool & beach venues is shown
+	Expected result: A list of Pool & beach venues is displayed, indicating their presence on the MapPage.
+4.	Check if Filter button and Module Dialog are present
+	Expected result: The Filter button is visible and clicking it opens a modal dialog where filtering options are available.
+5.	Check if Search Bar is displayed on the Page
+	Expected result: The Search Bar is visible and functional, allowing users to search for specific venues.
+6.	Check if Join button is on the Page
+	Expected result: The Join button, if applicable, is visible and provides users with the option to join a membership.
+7.	Check if MapBox is present on the page
+	Expected result: MapBox component used and displays the map interface.
+
+
+
+#### Test Suite#2 - Map Page Performance Validation: Check response time of requests.
+#### Objective: To validate that the MapPage performs efficiently, with acceptable response times.
+Test Cases:
+1.	Check response time of fetching Pool & beach venues - api/map/hotel
+	Expected result: The API request for Pool & beach venues returns a response within an acceptable time frame.
+2.	Check response time of fetching Fitness venues - api/map/fitness
+	Expected result: The API request for Fitness venues returns a response within an acceptable time frame.
+3.	Check response time of fetching Family venues - api/map/family
+	Expected result: The API request for Family venues returns a response within an acceptable time frame.
+4.	Check response time of fetching Dining venues - api/map/restaurant
+	Expected result: The API request for Dining venues returns a response within an acceptable time frame.
+
+
+
+Test Suite#3 - Map Page Functional Tests.
+#### Objective: Functional tests focus on verifying that the application works as expected from the end-user’s perspective. 
+#### Test Cases:
+1.	Check if Pool & beach venues are listed, venue dialog can be opened
+	Expected result: Pool & beach venues are listed on the MapPage, and clicking on a venue opens a dialog with venue details.
+2.	Check Fitness Category
+	Expected result: The Fitness category displays relevant venues.
+3.	Verify Filter Modal Dialog
+	Expected result: The Filter modal dialog opens when the Filter button is clicked, displaying filter options.
+4.	Verify Filter selection
+	Expected result: Applying a filter (by Location) updates the venue list.
+5.	Search bar verification
+	Expected result: Entering a search query filters the venue list and updates the map pins to display relevant results.
+6.	Check Submission of Explore Privilee venues form
+	Expected result: Submitting the Explore Privilee form with valid data successfully adds new venues or updates existing data as expected.
+7.	Check Venue details information in the modal dialog - Data Accuracy Check
+	Expected result: The information displayed in the venue modal dialog (name, address, rating) accurately matches the selected venue.
+8.	Check expanding Restaurants list in the modal dialog, verify Restaurant image
+	Expected result: Expanding the Restaurants list in the modal dialog shows additional details, including images, that accurately represent each restaurant.
+9.	MapBox verification
+
+
+
+#### Test Results:
+
+Test results were recorded and publish to Cypress Dashboard in the public Project that integrated with GitHub Action Pipeline.
+The details of the test run report can be found here:
+
+## https://cloud.cypress.io/projects/rp2jth/runs/1/overview?roarHideRunsWithDiffGroupsAndTags=1 
+
+Test runs:
+## https://cloud.cypress.io/projects/rp2jth/runs?branches=%5B%5D&committers=%5B%5D&flaky=%5B%5D&page=1&status=%5B%5D&tags=%5B%5D&tagsMatch=ANY&timeRange=%7B%22startDate%22%3A%222023-07-02%22%2C%22endDate%22%3A%222024-07-01%22%7D  
