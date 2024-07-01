@@ -9,7 +9,7 @@
 // Test Suite#2 MapPage Performance validation/ Checking Response time of fetching venues 
 // Test Suite#3 Functional tests:
 // 
-//  Covered Functional Test included the following scenarios:
+//  Covered Functional Test included the following tests:
 // # Venues List functionality tests
 // # Filter functionality tests
 // # Search functionality tests
@@ -32,7 +32,7 @@ describe('Test Suite#1 - Map Page UI Verification/ Page Elements are present', (
     });
 
     //Check if categories buttons are present on the Page
-    it('2. check if  categories buttons is displayed', () => {
+    it('2. check if  categories buttons is displayed on the page', () => {
       
         cy.contains('.sc-210e007d-0', 'Pool & beach');
         cy.contains('.sc-210e007d-0', 'Fitness');
