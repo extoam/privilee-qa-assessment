@@ -1,8 +1,16 @@
-name: Cypress tests
+name: Cypress_tests
 on: push
 jobs:
+
+  Build:
+    runs-on: ubuntu-22.04
+    name: Build application
+    steps:
+      - run: echo build application
+
+      
   cypress-run:
-    name: Cypress run
+    name: Cypress Tests
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -17,3 +25,10 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # pass the project ID from the secrets through environment variable
           CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+
+
+  deploy:
+    runs-on: ubuntu-22.04
+    name: Deploy application
+    steps:
+      - run: echo deploy
